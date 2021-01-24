@@ -35,17 +35,17 @@ for i in check:
 
 # 입력받기
 import sys
-k,n = list(map(int,input().split(' ')))
+k,n = map(int,input().split())
 array = [int(sys.stdin.readline()) for _ in range(k)]
 
 # 이진탐색 위한 시작점, 끝점 설정
-start = 0
+start = 1
 end = max(array)
 
 # 이진 탐색 수행(반복적)
 result=0
 while start<=end:
-    mid=(start+end)/2
+    mid=(start+end)//2
     count=0 # 랜선 수 초기값 설정
     for i in array:
         count+=i//mid # 나눈 랜선 수
